@@ -21,7 +21,7 @@ function ProductsOffered() {
   useEffect(() => {
     // Initial data load
     fetchProducts(pageData.pageIndex + 1, pageData.pageSize);
-  }, []);
+  });
   const onGetProductsSuccess = (response) => {
     console.log(response.data.length);
     let productsFromAPI = response.data;
