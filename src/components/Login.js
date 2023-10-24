@@ -1,8 +1,8 @@
-import React, { Fragment, useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
 function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
-  const location = useLocation();
+  //const location = useLocation();
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
