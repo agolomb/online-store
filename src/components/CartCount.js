@@ -12,3 +12,5 @@ function CartCount() {
   );
 }
 export default CartCount;
+
+/*This component is the shopping cart that is displayed on the NavBar. {cart.length} is the state object that display the number of items in the {cart} object. */

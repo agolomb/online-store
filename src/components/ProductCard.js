@@ -10,7 +10,7 @@ const ProductCard = ({ oneProduct }) => {
     addToCart(aProduct);
   };
   const navigate = useNavigate();
-  const onProductClicked = (e) => {
+  const onProductClicked = () => {
     navigate(`/productsoffered/${aProduct.id}`, { state: aProduct });
   };
   return (
@@ -36,7 +36,6 @@ const ProductCard = ({ oneProduct }) => {
         </div>
         <div className="m-2 flex justify-center">
           {" "}
-          {/* Container div for buttons */}
           <button
             onClick={handleAddToCart}
             className="m-1 text-lg bg-blue-500 hover:bg-blue-700 text-white font-normal py-1 px-2 rounded-full focus:outline-none focus:shadow-outline"

@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import NavBar from "./components/NavBar";
+import HomePage from "./components/HomePage";
 import Registration from "./components/Registration";
 import Login from "./components/Login";
 import PasswordRecovery from "./components/PasswordRecovery";
@@ -17,6 +18,7 @@ function App() {
           <CartProvider>
             <NavBar></NavBar>
             <Routes>
+              <Route path="/home" element={<HomePage />}></Route>
               <Route path="/registration" element={<Registration />}></Route>
               <Route path="/login" element={<Login />}></Route>
               <Route
@@ -40,18 +42,3 @@ function App() {
 }
 
 export default App;
-/*
-Use Context API for shopping cart state
-jwt.io for token
-
-auth part:
-store the password in the front end on a json file in the front end
-store users in the json file
-match username and password with the objects within that json file
-check for username and/or password
-"dynamically add properties to a json file"
-start with hardcoded values to get it to work
-then add complexity
-
-
-*/
