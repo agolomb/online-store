@@ -1,13 +1,13 @@
 import React from "react";
-import { useCart } from "./CartContext"; // Adjust the import path as needed
+import { useCart } from "./CartContext";
+import { ShoppingCart } from "react-feather";
 
 function CartCount() {
-  // Use the useCart hook to access the cart data
   const { cart } = useCart();
-
   return (
-    <div className="cart-count bg-blue-500 text-white font-semibold px-2 py-1 rounded-full">
-      <span>My Cart Count: {cart.length}</span>
+    <div className="cart-count bg-blue-500 text-white font-semibold px-2 py-1 rounded-full flex items-center">
+      <ShoppingCart size={24} />
+      <span className="text-gray-900 ml-1">{cart.length}</span>
     </div>
   );
 }

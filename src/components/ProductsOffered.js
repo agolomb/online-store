@@ -21,7 +21,7 @@ function ProductsOffered() {
   useEffect(() => {
     // Initial data load
     fetchProducts(pageData.pageIndex + 1, pageData.pageSize);
-  });
+  }, []);
   const onGetProductsSuccess = (response) => {
     console.log(response.data.length);
     let productsFromAPI = response.data;
@@ -51,7 +51,7 @@ function ProductsOffered() {
         hasMore={true} // Set to true to always allow infinite scrolling
         loader={<h4>Loading...</h4>}
       >
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 gap-4" style={{ marginTop: "40px" }}>
           {pageData.products.map((singleProduct) => (
             <ProductCard oneProduct={singleProduct} key={singleProduct.id} />
           ))}
