@@ -18,7 +18,7 @@ function App() {
           <CartProvider>
             <NavBar></NavBar>
             <Routes>
-              <Route path="/home" element={<HomePage />}></Route>
+              <Route path="/" element={<HomePage />}></Route>
               <Route path="/registration" element={<Registration />}></Route>
               <Route path="/login" element={<Login />}></Route>
               <Route
